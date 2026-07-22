@@ -52,8 +52,8 @@ Logic: Collect the identified variants and log them into a structured layout (li
 ## Current Status
 
 - Stage 1 — FASTA parsing and ingestion: **complete**
-- Stage 2 — Needleman-Wunsch alignment: **in progress**
-- Stage 3 — Variant classification: **in progress**
-- Stage 4 — Structured reporting/output: **planned**
+- Stage 2 — Needleman-Wunsch alignment: **complete**
+- Stage 3 — Variant classification: **complete**
+- Stage 4 — Structured reporting/output: **complete**
 
-This project is under active development. 
+Tested end-to-end against a real NCBI RefSeq sequence (human HBB gene, NM_000518.5), correctly identifying SNPs, insertions, and deletions.
