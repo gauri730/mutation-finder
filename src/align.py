@@ -68,7 +68,12 @@ def classify_variants(aligned_ref, aligned_sample):
             variants.append((pos, 'SNP', ref_char, sample_char))
     return variants
 
-
+def reporting_variants(variants):
+    if not variants:
+        print("No variants found.")
+        return
+    for pos, mutation_type, ref_char, sample_char in variants:
+        print(f"Position {pos}: {mutation_type} ({ref_char} -> {sample_char})")
 if __name__ == "__main__":
     ref = parse_fasta('data/reference.fasta')
     sample = parse_fasta('data/sample.fasta')
@@ -80,3 +85,5 @@ if __name__ == "__main__":
     print("Aligned sample:", aligned_sample)
     variants = classify_variants(aligned_ref, aligned_sample)
     print("Variants found:", variants)
+    print()
+    reporting_variants(variants)
